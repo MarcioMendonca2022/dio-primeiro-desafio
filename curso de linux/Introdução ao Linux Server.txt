@@ -1,0 +1,58 @@
+Linux Server
+
+Utilizando alguns comandos:
+
+criar um novo usuário no servidor: useradd  
+
+
+useradd --help
+
+criando um usuário e senha, mas ja tem que passar os parametros para a senha ja sair encriptada
+
+# useradd convidado1 -c "convidado especial" -s /bin/bash -m -p $ (openssl passwd -crypt Senha456)
+
+cd /
+
+# mkdir /scripts
+#cd /scripts/
+#ls
+/scripts# nano criar_user.sh
+
+GNU nano 7.2
+
+#!/bin/bash
+
+echo "Criando usuário do sistema..."
+
+useradd guest10 -c "Usuário convidado" -s /bin/bash -m -p $ (openssl paswd -crypt Senha456)
+passwd guest10 -e 
+
+useradd guest11 -c "Usuário convidado" -s /bin/bash -m -p $ (openssl paswd -crypt Senha456)
+passwd guest11 -e 
+
+useradd guest12 -c "Usuário convidado" -s /bin/bash -m -p $ (openssl paswd -crypt Senha456)
+passwd guest12 -e 
+
+useradd guest13 -c "Usuário convidado" -s /bin/bash -m -p $ (openssl paswd -crypt Senha456)
+passwd guest13 -e 
+
+echo "Finalizado"
+
+
+apt-get 
+apt (mais moderno)
+apt list --installed
+apt list --upgradeable //ver o que pode ser instalado
+apt search samba
+apt search apache (apache para servidor web)
+
+ifconfig ou ip a
+
+weg - utilizado para fazer downloads
+
+apt remove
+
+apt edit-sources - link de todos os repositórios oficiais do ubuntu
+
+
+Iac = Infraestrutura como código
